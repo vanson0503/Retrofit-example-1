@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fake API Store"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:paddingVertical="5dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductList"
+        android:padding="5dp"
+        android:background="#E6E6E6"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/loLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</LinearLayout>
